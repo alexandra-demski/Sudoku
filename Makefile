@@ -38,7 +38,8 @@ $(B_PACK_CTRL)AutoCreateController.class : 	$(S_PACK_CTRL)AutoCreateController.j
 	$(JC) $(JCFLAGS) $(S_PACK_CTRL)AutoCreateController.java
 
 $(B_PACK_CTRL)BackController.class : 	$(S_PACK_CTRL)BackDialogController.java \
-											$(S_PACK_GUI)StartFrame.java
+										$(S_PACK_GUI)StartFrame.java \
+										$(S_PACK_SDK)NumberMemo.java
 	$(JC) $(JCFLAGS) $(S_PACK_CTRL)BackDialogController.java
 
 $(B_PACK_CTRL)CellController.class : 	$(S_PACK_CTRL)CellController.java \

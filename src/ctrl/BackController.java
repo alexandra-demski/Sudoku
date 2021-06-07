@@ -6,6 +6,8 @@ package ctrl;
 
 import gui.StartFrame;
 
+import sudoku.NumberMemo;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -33,6 +35,8 @@ public class BackController implements ActionListener{
     {
     	int option = JOptionPane.showConfirmDialog(this.frame,"Are you sure you want to exit ?");
         if(option == JOptionPane.YES_OPTION){
+            NumberMemo memo = NumberMemo.getInstance(); //On récupère le dernier chiffre en mémoire
+            memo.setValeur(-1); //Et on le met à -1 (aucune option)
             this.frame.dispose();  
             StartFrame start = new StartFrame();
         }
